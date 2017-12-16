@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PORTFOLIOES } from '../mocks/portfolios'
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  portfolios = PORTFOLIOES;
 
   constructor() { }
 
