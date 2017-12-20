@@ -1,5 +1,11 @@
-<div class="about">
-    <p *ngFor="let like of about.likes">
-      {{like}}
-    </p>
-</div>
+<section>
+  <div class="about">
+    <div class="portrait">
+      <img src={{about.photoUrl}} width="300px" height="300px" alt="">
+    </div>
+    <div class="likes">
+      <p *ngFor="let like of about.likes">{{like}}</p>
+    </div>
+  </div>
+</section>
+
