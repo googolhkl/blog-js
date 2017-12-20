@@ -1,6 +1,7 @@
-<div class="portfolios">
-  <div class="portfolio" *ngFor="let portfolio of portfolios">
-      {{portfolio.title}}
-
+<section>
+  <div class="portfolios">
+    <div class="portfolio" *ngFor="let portfolio of portfolios">
+      <a href={{portfolio.link}}><img src={{portfolio.photoUrl}} width="100px" height="100px" alt={{portfolio.description}}></a>
+    </div>
   </div>
-</div>
+</section>

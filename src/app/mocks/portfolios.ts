@@ -6,7 +6,7 @@ export const PORTFOLIOES: Portfolio[] = [
         title: 'Talk Talk TimeTable',
         description: '시간표',
         photoUrl: 'https://s3.ap-northeast-2.amazonaws.com/apollon/portfolio/portfolio6.jpg',
-        link: 'href="https://github.com/googolhkl/scheduler'
+        link: 'https://github.com/googolhkl/scheduler'
     },
     {
         id: 2,
