@@ -1,0 +1,16 @@
+body {
+    background-color: yellow;
+}
+header {
+    border-style: dotted;
+    border-color: brown;
+    border-width: 1px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
