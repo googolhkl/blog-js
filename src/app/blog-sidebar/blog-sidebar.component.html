@@ -1,0 +1,9 @@
+<aside>
+  <div class="blog-sidebar">
+    카테고리
+    <p *ngFor="let category of sidebar.categories">{{category.name}} {{category.link}}</p>
+
+    태그
+    <p *ngFor="let tag of sidebar.tags">{{tag.name}} {{tag.link}}</p>
+  </div>
+</aside>
