@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PORTFOLIOES } from '../mocks/portfolios'
+import { PORTFOLIOES } from '../mocks/portfolios';
 
 @Component({
   selector: 'app-portfolio',

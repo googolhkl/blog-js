@@ -1,3 +1,34 @@
-<p>
-  resume works!
-</p>
+<section>
+  <div class="resume">
+    <section>
+      <div class="private-information">
+        개인정보
+        {{resume.name}}
+        {{resume.privateInformation.name}}
+        {{resume.privateInformation.birth}}
+        {{resume.privateInformation.home}}
+        {{resume.privateInformation.phone}}
+        {{resume.privateInformation.mail}}
+        <p *ngFor="let skill of resume.privateInformation.skills">{{skill.name}} {{skill.proficiency}} {{skill.description}}</p>
+      </div>
+    </section>
+    <section>
+      <div class="education">
+        학교
+        <p *ngFor="let school of resume.education.schools">{{school.name}} {{school.department}} {{school.periodStart}} - {{school.periodEnd}} | {{school.graduation}}</p>
+      </div>
+    </section>
+    <section>
+      <div class="experience">
+        경험
+        <div *ngFor="let experience of resume.experiences">{{experience.host}} {{experience.periodStart}} - {{experience.periodEnd}} <p *ngFor="let project of experience.projects"> {{project.name}} {{project.role}} {{project.description}}</p></div>
+      </div>
+    </section>
+    <section>
+      <div class="self-introduction">
+        자기소개
+        <p *ngFor="let selfIntroduction of resume.selfIntroductions">{{selfIntroduction.subject}} {{selfIntroduction.description}}</p>
+      </div>
+    </section>
+  </div>
+</section>
