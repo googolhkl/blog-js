@@ -14,3 +14,12 @@ nav ul {
 nav ul li {
     display: inline-block;
 }
+
+button {
+    background-color: brown;
+}
+
+#social {
+    background-color: aquamarine;
+    position: static;
+}

@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -20,7 +23,9 @@ import { ResumeComponent } from './resume/resume.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
