@@ -6,6 +6,8 @@ header {
     border-style: dotted;
     border-color: brown;
     border-width: 1px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 nav ul {
@@ -14,10 +16,6 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-}
-
-button {
-    background-color: brown;
 }
 
 #social {

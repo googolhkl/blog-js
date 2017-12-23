@@ -1,34 +1,30 @@
 <header>
   <nav>
-    <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
+    <div class="mobile">
+      <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
 
-    <!--
-    <a class="menu-trigger type7" href="#" (click)="test($event)">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  -->
-    <a class="menu-trigger hamberger" href="#" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger= !hamberger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
+      <div class="menu-trigger hamberger" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger= !hamberger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <div class="my-menu">
-        <ul id="main-menu">
-          <li><a routerLink="/">WORK</a></li>
-          <li><a routerLink="/blog">BLOG</a></li>
-          <li><a routerLink="/about">ABOUT</a></li>
-          <li><a routerLink="/resume">RESUME</a></li>
-        </ul>
-        <ul id="social">
-          <li><a href="https://www.instagram.com/googolhkl/">Instagram</a></li>
-          <li><a href="https://www.facebook.com/googolhkl">Facebook</a></li>
-          <li><a href="https://www.linkedin.com/in/hooney-lee-a37b63bb/?trk=hp-identity-name">LinkedIn</a></li>
-          <li><a href="https://github.com/googolhkl">Github</a></li>
-        </ul>
+      <div class="menu-wrapper">
+          <ul id="main-menu">
+            <li><a routerLink="/">WORK</a></li>
+            <li><a routerLink="/blog">BLOG</a></li>
+            <li><a routerLink="/about">ABOUT</a></li>
+            <li><a routerLink="/resume">RESUME</a></li>
+          </ul>
+          <ul id="social">
+            <li><a href="https://www.instagram.com/googolhkl/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/googolhkl">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/hooney-lee-a37b63bb/?trk=hp-identity-name">LinkedIn</a></li>
+            <li><a href="https://github.com/googolhkl">Github</a></li>
+          </ul>
+      </div>
     </div>
+
 
   </nav>
 </header>
