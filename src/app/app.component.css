@@ -122,11 +122,11 @@ button {
 		transform : translateY(0) rotate(0);
 	}
 }
-.menu-trigger.active-7 span:nth-of-type(1) {
-	-webkit-animation : active-menu-bar07-01 .75s forwards;
-	animation : active-menu-bar07-01 .75s forwards;
+.menu-trigger.hamberger-clicked span:nth-of-type(1) {
+	-webkit-animation : active-menu-bar-01 .75s forwards;
+	animation : active-menu-bar-01 .75s forwards;
 }
-@-webkit-keyframes active-menu-bar07-01 {
+@-webkit-keyframes active-menu-bar-01 {
 	0% {
 		-webkit-transform : translateY(0) rotate(0);
 	}
@@ -137,7 +137,7 @@ button {
 		-webkit-transform : translateY(20px) rotate(45deg);
 	}
 }
-@keyframes active-menu-bar07-01 {
+@keyframes active-menu-bar-01 {
 	0% {
 		transform : translateY(0) rotate(0);
 	}
@@ -148,14 +148,14 @@ button {
 		transform : translateY(20px) rotate(45deg);
 	}
 }
-.menu-trigger.active-7 span:nth-of-type(2) {
+.menu-trigger.hamberger-clicked span:nth-of-type(2) {
 	opacity : 0;
 }
-.menu-trigger.active-7 span:nth-of-type(3) {
-	-webkit-animation : active-menu-bar07-02 .75s forwards;
-	animation : active-menu-bar07-02 .75s forwards;
+.menu-trigger.hamberger-clicked span:nth-of-type(3) {
+	-webkit-animation : active-menu-bar-02 .75s forwards;
+	animation : active-menu-bar-02 .75s forwards;
 }
-@-webkit-keyframes active-menu-bar07-02 {
+@-webkit-keyframes active-menu-bar-02 {
 	0% {
 		-webkit-transform : translateY(0) rotate(0);
 	}
@@ -166,7 +166,7 @@ button {
 		-webkit-transform : translateY(-20px) rotate(-45deg);
 	}
 }
-@keyframes active-menu-bar07-02 {
+@keyframes active-menu-bar-02 {
 	0% {
 		transform : translateY(0) rotate(0);
 	}
