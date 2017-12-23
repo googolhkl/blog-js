@@ -3,15 +3,19 @@ header {
     border-color: brown;
     border-width: 1px;
     font-family: 'Montserrat', sans-serif;
+}
 
+.mobile {
+}
+
+#main-bar {
+    float: left;
+    width: 100%;
+    margin: 1em 0em;
 }
 
 #main-title {
     float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 nav ul {
@@ -21,22 +25,22 @@ nav ul {
 nav ul li {
     display: inline-block;
 }
-
-#social {
-    background-color: aquamarine;
-    position: static;
-}
-
 .main-wrapper {
     float: both;
+}
+
+#main-menu, #social {
+    display: none;
 }
 
 /* hamberger */
 .hamberger {
     float: right;
 }
+
 .menu-trigger {
 }
+
 .menu-trigger,
 .menu-trigger span {
 	display: inline-block;

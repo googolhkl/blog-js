@@ -1,12 +1,15 @@
 <header>
   <nav>
     <div class="mobile">
-      <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
+      <div id="main-bar">
+        <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
 
-      <div class="menu-trigger hamberger" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger= !hamberger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="menu-trigger hamberger" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger= !hamberger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
 
       <div class="menu-wrapper">
