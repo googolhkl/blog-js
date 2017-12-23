@@ -2,9 +2,20 @@
   <nav>
     <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
 
+    <!--
+    <a class="menu-trigger type7" href="#" (click)="test($event)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  -->
+    <a class="menu-trigger type7" href="#" [ngClass]="{'active-7': hamberger}" (click)="hamberger= !hamberger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+
     <div class="my-menu">
-      <button class="ion-navicon" mat-button [matMenuTriggerFor]="menu"></button>
-      <mat-menu class="test" #menu="matMenu">
         <ul id="main-menu">
           <li><a routerLink="/">WORK</a></li>
           <li><a routerLink="/blog">BLOG</a></li>
@@ -17,7 +28,6 @@
           <li><a href="https://www.linkedin.com/in/hooney-lee-a37b63bb/?trk=hp-identity-name">LinkedIn</a></li>
           <li><a href="https://github.com/googolhkl">Github</a></li>
         </ul>
-      </mat-menu>
     </div>
 
   </nav>
