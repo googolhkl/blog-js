@@ -66,7 +66,7 @@ button {
 
 /* type-07 */
 /* 라인이 하나로 합쳐졌다가 엑스자 만들기 */
-.menu-trigger.type7 span:nth-of-type(1) {
+.menu-trigger.hamberger span:nth-of-type(1) {
 	-webkit-animation : menu-bar07-01 .75s forwards;
 	animation : menu-bar07-01 .75s forwards;
 }
@@ -92,11 +92,11 @@ button {
 		transform : translateY(0) rotate(0);
 	}
 }
-.menu-trigger.type7 span:nth-of-type(2) {
+.menu-trigger.hamberger span:nth-of-type(2) {
 	transition : all .25s .25s;
 	opacity : 1;
 }
-.menu-trigger.type7 span:nth-of-type(3) {
+.menu-trigger.hamberger span:nth-of-type(3) {
 	-webkit-animation : menu-bar07-02 .75s forwards;
 	animation : menu-bar07-02 .75s forwards;
 }

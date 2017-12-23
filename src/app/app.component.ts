@@ -9,9 +9,4 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 })
 export class AppComponent {
   title = 'app';
-
-  test(event): void {
-    console.log('HELLO WORLD');
-    console.log(event);
-  }
 }
