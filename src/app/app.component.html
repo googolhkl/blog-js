@@ -3,7 +3,7 @@
     <div class="mobile">
       <div id="main-bar">
         <div id="main-title"><a routerLink="/">GOOGOLHKL</a></div>
-        <div class="menu-trigger hamberger" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger= !hamberger">
+        <div class="menu-trigger hamberger" [ngClass]="{'hamberger-clicked': hamberger}" (click)="hamberger = !hamberger" (click)="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
@@ -11,12 +11,12 @@
       </div>
 
     </div>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" [ngStyle]="getMenuStyle()">
         <ul id="main-menu">
-          <li><a routerLink="/">WORK</a></li>
-          <li><a routerLink="/blog">BLOG</a></li>
-          <li><a routerLink="/about">ABOUT</a></li>
-          <li><a routerLink="/resume">RESUME</a></li>
+          <li><a routerLink="/" (click)="hamberger = !hamberger" (click)="toggleMenu()">WORK</a></li>
+          <li><a routerLink="/blog" (click)="hamberger = !hamberger" (click)="toggleMenu()">BLOG</a></li>
+          <li><a routerLink="/about" (click)="hamberger = !hamberger" (click)="toggleMenu()">ABOUT</a></li>
+          <li><a routerLink="/resume" (click)="hamberger = !hamberger" (click)="toggleMenu()">RESUME</a></li>
         </ul>
         <ul id="social">
           <li><a class="ion-social-instagram" href="https://www.instagram.com/googolhkl/"></a></li>

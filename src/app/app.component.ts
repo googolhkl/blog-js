@@ -9,4 +9,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 })
 export class AppComponent {
   title = 'app';
+  is_show_menu = false;
+
+  toggleMenu(): void {
+    this.is_show_menu = !this.is_show_menu;
+  }
+
+  getMenuStyle(): object {
+    return this.is_show_menu ? {'display': 'block'} : {'display': 'none'};
+  }
 }
