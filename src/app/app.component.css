@@ -4,7 +4,7 @@ header {
 
 .mobile {
     display: flex;
-    justify-content: center;
+	justify-content: center;
 }
 
 #main-bar {
@@ -34,12 +34,12 @@ nav ul {
 nav ul li {
     display: inline-block;
 }
-.main-wrapper {
-    float: both;
+
+.menu-wrapper {
 }
 
 #main-menu, #social {
-    display: none;
+    /* display: none; */
 }
 
 /* Mobile M*/
