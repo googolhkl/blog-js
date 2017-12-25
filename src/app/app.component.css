@@ -2,9 +2,15 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* mobile */
 .mobile {
     display: flex;
 	justify-content: center;
+	position: fixed;
+	height: 70px;
+	width: 100%;
+	z-index: 3;
+	background-color: white;
 }
 
 #main-bar {
@@ -12,6 +18,10 @@ header {
     justify-content: center;
     width: 80%;
     margin: 1.5em 0em 1em 1em;
+}
+.main-bar-placeholder {
+	height: 70px;
+	width: 100%;
 }
 
 #main-title {
