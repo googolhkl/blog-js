@@ -1,18 +1,36 @@
 <section>
   <div class="resume">
+
     <section>
       <div class="private-information">
-        개인정보
-        <img src={{resume.photoUrl}} width="300px" height="300px" alt="">
-        {{resume.name}}
-        {{resume.privateInformation.name}}
-        {{resume.privateInformation.birth}}
-        {{resume.privateInformation.home}}
-        {{resume.privateInformation.phone}}
-        {{resume.privateInformation.mail}}
+        <div class="my-information">
+          <div class="name-title hklfont"><p>{{resume.name}}</p></div>
+          <img src={{resume.privateInformation.photoUrl}} alt="이경훈사진">
+          <div class="info-list">
+            <p class="list-title hklfont">NAME</p>
+            <p class="list-value">{{resume.privateInformation.name}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">BIRTH</p>
+            <p class="list-value">{{resume.privateInformation.birth}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">HOME</p>
+            <p class="list-value">{{resume.privateInformation.home}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">PHONE</p>
+            <p class="list-value">{{resume.privateInformation.phone}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">MAIL</p>
+            <p class="list-value">{{resume.privateInformation.mail}}</p>
+          </div>
+        </div>
         <p *ngFor="let skill of resume.privateInformation.skills">{{skill.name}} {{skill.proficiency}} {{skill.description}}</p>
       </div>
     </section>
+
     <section>
       <div class="education">
         학교

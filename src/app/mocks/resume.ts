@@ -1,11 +1,9 @@
 import { Resume } from '../resume/shared/resume.model';
 
 export const RESUME: Resume = {
-    name: 'KyeongHoon Lee',
+    name: 'KYEONGHOON LEE',
     privateInformation: {
-        'photoUrl': 'https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAxNjExMDJfMTQx%2FMDAxNDc4MDUxODQ2Mzkx' +
-        '.5GLUsjHVQiJxvUtYxgqBnv70dj1WJdY5Nc6p55ZZehQg.XVsppCbA5u-sAzG3O2vnHGWVq7Y6OSNKpGwZnzx_R78g' +
-        '.JPEG%2FIPGyqSUOB0gGB5Wh7JX5Fso_Oj3Y.jpg&type=b400',
+        'photoUrl': 'https://s3.ap-northeast-2.amazonaws.com/apollon/about/me2.jpg',
         'name': '이경훈 (李敬薰)',
         'birth': '1991년 5월 16일',
         'home': '서울특별시 강남구 언주로 79길 20',

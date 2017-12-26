@@ -1,0 +1,48 @@
+.hklfont {
+    font-family: 'Montserrat', sans-serif;
+}
+.private-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    display: block;
+    width: 19em;
+    height: 19em;
+    margin: 0 auto;
+}
+.my-information {
+    margin-top: 1em;
+    width: 19em;
+}
+
+.name-title {
+    text-align: center;
+    color: #333333;
+    font-size: 21px;
+}
+
+.info-list {
+    clear: left;
+    height: 1em;
+    margin: 1em 0;
+}
+.list-title {
+    display: block;
+    float: left;
+    width: 5em;
+    color: #333333;
+    font-weight: 900;
+    margin: 0;
+    height: 19px;
+}
+
+.list-value {
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 0;
+}
