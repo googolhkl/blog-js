@@ -1,10 +1,10 @@
 <section>
   <div class="about">
     <div class="portrait">
-      <img src={{about.photoUrl}} width="300px" height="300px" alt="">
+      <img src={{about.photoUrl}} alt="이경훈사진">
     </div>
     <div class="likes">
-      <p *ngFor="let like of about.likes">{{like}}</p>
+      <p *ngFor="let like of about.likes">{{like | uppercase}}</p>
     </div>
   </div>
 </section>

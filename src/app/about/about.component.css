@@ -1,0 +1,23 @@
+.portrait {
+    display: flex;
+    justify-content: center;
+    margin: 5em 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+
+.likes {
+    font-size: 15px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    color: #333333;
+}
+
+.likes p {
+    text-align: center;
+}
