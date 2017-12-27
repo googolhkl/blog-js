@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {SuiModule, SuiProgressModule} from 'ng2-semantic-ui';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +28,9 @@ import { ResumeComponent } from './resume/resume.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
+    MatProgressBarModule,
+    SuiModule,
+    SuiProgressModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

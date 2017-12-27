@@ -27,14 +27,17 @@
             <p class="list-value">{{resume.privateInformation.mail}}</p>
           </div>
           <p class="list-title hklfont">SKILL</p>
-          <p class="skill" *ngFor="let skill of resume.privateInformation.skills">{{skill.name}} {{skill.proficiency}} {{skill.description}}</p>
+            <div class="skill" *ngFor="let skill of resume.privateInformation.skills">
+              <div class="black hklfont">{{skill.name}}</div>
+              <sui-progress class="active small" [value]="skill.proficiency" [showProgress]="false" [maximum]="100" [precision]="0"></sui-progress>
+            </div>
         </div>
-
       </div>
     </section>
 
     <section>
       <div class="education">
+        <div class="name-title hklfont"><p>{{resume.name}}</p></div>
         학교
         <p *ngFor="let school of resume.education.schools">{{school.name}} {{school.department}} {{school.periodStart}} - {{school.periodEnd}} | {{school.graduation}}</p>
       </div>
