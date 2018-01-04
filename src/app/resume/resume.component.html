@@ -2,7 +2,7 @@
   <div class="resume">
 
     <section>
-      <div class="private-information">
+      <div class="section-inner">
         <div class="my-information">
           <div class="name-title hklfont"><p>{{resume.name}}</p></div>
           <img src={{resume.privateInformation.photoUrl}} alt="이경훈사진">
@@ -36,15 +36,17 @@
     </section>
 
     <section>
-      <div class="education hklfont">
-        <div class="name-title"><p>{{resume.name}}</p></div>
-        <div class="education-title">EDUCATION</div>
-        <div *ngFor="let school of resume.education.schools">
-          <div class="school-information">
-            <div class="school-name">{{school.name}}</div>
-            <div class="school-department">{{school.department}}</div>
-            <div class="school-graduation-period">
-              {{school.periodStart}} - {{school.periodEnd}} | {{school.graduation}}
+      <div class="section-inner">
+        <div class="education hklfont">
+          <div class="name-title"><p>{{resume.name}}</p></div>
+          <div class="education-title">EDUCATION</div>
+          <div *ngFor="let school of resume.education.schools">
+            <div class="school-information">
+              <div class="school-name">{{school.name}}</div>
+              <div class="school-department">{{school.department}}</div>
+              <div class="school-graduation-period">
+                {{school.periodStart}} - {{school.periodEnd}} | {{school.graduation}}
+              </div>
             </div>
           </div>
         </div>
@@ -52,18 +54,22 @@
     </section>
 
     <section>
-      <div class="experience hklfont">
-        <div class="experience-title">EXPERIENCE</div>
-        <div *ngFor="let experience of resume.experiences">
-          <div class="experience-host-name">
-            {{experience.host}} {{experience.periodStart}} - {{experience.periodEnd}} 
-          </div>
-          <div *ngFor="let project of experience.projects"> 
-            <div class="experience-project-name-and-role">
-              {{project.name}} {{project.role}}
-            </div>
-            <div class="experience-project-description">
-              {{project.description}}
+      <div class="section-inner">
+        <div class="experience hklfont">
+          <div class="experience-title">EXPERIENCE</div>
+          <div class="experience-host" *ngFor="let experience of resume.experiences">
+            <div class="experience-host-name">{{experience.host}}</div>
+            <div class="experience-period">{{experience.periodStart}} - {{experience.periodEnd}}</div>
+            <div class="experience-project" *ngFor="let project of experience.projects">
+              <div class="experience-project-name">
+                {{project.name}}
+              </div>
+              <div class="experience-project-role">
+                {{project.role}}
+              </div>
+              <div class="experience-project-description">
+                {{project.description}}
+              </div>
             </div>
           </div>
         </div>
@@ -71,17 +77,20 @@
     </section>
 
     <section>
-      <div class="self-introduction">
-        <div class="self-introduction-title">SELF INTRODUCTION</div>
-        <div *ngFor="let selfIntroduction of resume.selfIntroductions">
-          <div class="self-introduction-subject">
-            {{selfIntroduction.subject}}
-          </div>
-          <div class="self-introduction-description">
-            {{selfIntroduction.description}}
+      <div class="section-inner">
+        <div class="self-introduction hklfont">
+          <div class="self-introduction-title">SELF INTRODUCTION</div>
+          <div class="self-introduction-section" *ngFor="let selfIntroduction of resume.selfIntroductions">
+            <div class="self-introduction-subject hklfont">
+              {{selfIntroduction.subject}}
+            </div>
+            <div class="self-introduction-description">
+              {{selfIntroduction.description}}
+            </div>
           </div>
         </div>
       </div>
     </section>
+
   </div>
 </section>
