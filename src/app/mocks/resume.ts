@@ -70,18 +70,18 @@ export const RESUME: Resume = {
     education: {
         'schools': [
             {
-                'name': '** University',
+                'name': 'GANGNEUNG-WONJU NATIONAL UNIVERSITY',
                 'department': '전자공학과',
-                'periodStart': 'March 2010',
-                'periodEnd': 'Feb 2012',
+                'periodStart': 'March 2014',
+                'periodEnd': 'Feb 2017',
                 'graduation': '졸업'
             },
             {
-                'name': '** University2',
+                'name': 'KOREA ARMY ACADEDY AT YEONG-CHEON',
                 'department': '컴퓨터학과',
-                'periodStart': 'March 2010',
+                'periodStart': 'Jan 2012',
                 'periodEnd': 'Feb 2012',
-                'graduation': '졸업'
+                'graduation': '자퇴'
             }
         ]
     },
@@ -93,8 +93,11 @@ export const RESUME: Resume = {
             'projects': [
                 {
                     'name': 'Refresh Club',
-                    'role': 'development',
-                    'description': '개발했음'
+                    'role': '백엔드 & API 개발',
+                    'description': '의무교육은 무상으로 한다. 모든 국민은 양심의 자유를 가진다. 이 헌법은 1988년 2월 25일부터 시행한다. 다만, \
+                     이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 \
+                     이 헌법시행 전에 할 수 있다. \
+                    헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.'
                 },
                 {
                     'name': 'Refresh Field',
@@ -119,7 +122,14 @@ export const RESUME: Resume = {
     selfIntroductions: [
         {
             'subject': '자신의 장점',
-            'description': '단점이 없다.',
+            'description': '이 헌법은 1988년 2월 25일부터 시행한다. 다만,\
+            이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령\
+            및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.\
+            형사피고인은 유죄의 판결이 확정될 때까지는 무죄로 추정된다. 대법원장의 임기는 6년으로 하며,\
+            중임할 수 없다.\
+            선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다.\
+            감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.\
+            의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.'
         },
         {
             'subject': '자신의 단점',
