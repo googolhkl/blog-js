@@ -2,33 +2,54 @@
   <div class="blog-sidebar section-inner-wrapper hklfont">
 
     <div class="section-inner">
-      <div class="blog-sidebar-category" *ngFor="let category of sidebar.categories">
-        <a href="blog/categories/{{category.name}}">{{category.name}}</a>
+      <div class="blog-sidebar-category" *ngFor="let category of sidebar.categories" (click)="getPostByCategory(category.name)">
+        <p>{{category.name}}</p>
       </div>
     </div>
 
     <div class="section-inner">
-      <div class="blog-sidebar-tag" *ngFor="let tag of sidebar.tags">
-        <a href="blog/tags/{{tag.name}}">#{{tag.name}}</a>
+      <div class="blog-sidebar-tag" *ngFor="let tag of sidebar.tags" (click)="getPostByTag(tag.name)">
+        <p>#{{tag.name}}</p>
       </div>
     </div>
 
   </div>
 </aside>
 
-<section>
+<section *ngIf="postContentMode == 'list'">
   <div class="section-inner-wrapper">
     <div class="post section-inner" *ngFor="let post of posts">
-      <a href="blog/posts/{{post.id}}" class="post-link">
+      <a href="javascript:void(0);" class="post-link" (click)="getPostByID(post.id)">
         <div class="post-title">{{post.title}}</div>
         <div class="post-content">{{post.content}}</div>
       </a>
 
       <div class="post-meta">
-        <a href="blog/categories/{{post.category}}" class="post-category">{{post.category}}</a>
-        <a href="blog/tags/{{tag}}" class="post-tags" *ngFor="let tag of post.tags">#{{tag}}</a>
+        <p class="post-category" (click)="getPostByCategory(post.category)">{{post.category}}</p>
+        <p class="post-tags" *ngFor="let tag of post.tags" (click)="getPostByTag(tag)">#{{tag}}</p>
         <div class="post-created-at">{{post.createdAt}}</div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section *ngIf="postContentMode == 'detail'">
+  <div class="section-inner-wrapper">
+    <div class="post section-inner">
+      <div class="post-detail-title">{{post.title}}</div>
+
+      <div class="post-detail-meta">
+        <div class="post-detail-inner-wrapper">
+          <div class="post-detail-inner">
+            <p class="post-detail-category" (click)="getPostByCategory(post.category)">{{post.category}}</p>
+            <p class="post-detail-tags" *ngFor="let tag of post.tags" (click)="getPostByTag(tag)">#{{tag}}</p>
+          </div>
+        </div>
+        <div class="post-detail-created-at">{{post.createdAt}}</div>
+      </div>
+
+      <div class="post-detail-content">{{post.content}}</div>
 
     </div>
   </div>

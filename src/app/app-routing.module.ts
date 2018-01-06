@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogSidebarComponent},
   { path: 'about', component: AboutComponent},
   { path: 'resume', component: ResumeComponent},
+  { path: '**', redirectTo: ''},
 ];
 
 @NgModule({
