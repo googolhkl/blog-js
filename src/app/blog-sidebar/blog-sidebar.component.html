@@ -1,9 +1,35 @@
 <aside>
-  <div class="blog-sidebar">
-    카테고리
-    <p *ngFor="let category of sidebar.categories">{{category.name}} {{category.link}}</p>
+  <div class="blog-sidebar section-inner-wrapper hklfont">
 
-    태그
-    <p *ngFor="let tag of sidebar.tags">{{tag.name}} {{tag.link}}</p>
+    <div class="section-inner">
+      <div class="blog-sidebar-category" *ngFor="let category of sidebar.categories">
+        <a href="blog/categories/{{category.name}}">{{category.name}}</a>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="blog-sidebar-tag" *ngFor="let tag of sidebar.tags">
+        <a href="blog/tags/{{tag.name}}">#{{tag.name}}</a>
+      </div>
+    </div>
+
   </div>
 </aside>
+
+<section>
+  <div class="section-inner-wrapper">
+    <div class="post section-inner" *ngFor="let post of posts">
+      <a href="blog/posts/{{post.id}}" class="post-link">
+        <div class="post-title">{{post.title}}</div>
+        <div class="post-content">{{post.content}}</div>
+      </a>
+
+      <div class="post-meta">
+        <a href="blog/categories/{{post.category}}" class="post-category">{{post.category}}</a>
+        <a href="blog/tags/{{tag}}" class="post-tags" *ngFor="let tag of post.tags">#{{tag}}</a>
+        <div class="post-created-at">{{post.createdAt}}</div>
+      </div>
+
+    </div>
+  </div>
+</section>

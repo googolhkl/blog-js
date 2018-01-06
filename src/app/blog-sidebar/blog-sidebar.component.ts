@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SIDEBAR } from '../mocks/blog-sidebar';
+import { SIDEBAR, POSTS } from '../mocks/blog-sidebar';
 
 @Component({
   selector: 'app-blog',
@@ -8,6 +8,7 @@ import { SIDEBAR } from '../mocks/blog-sidebar';
 })
 export class BlogSidebarComponent implements OnInit {
   sidebar = SIDEBAR;
+  posts = POSTS;
 
   constructor() { }
 
