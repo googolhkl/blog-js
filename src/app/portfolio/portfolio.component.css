@@ -26,3 +26,14 @@ img {
         margin: 0 0.5%;
     }
 }
+
+@media (min-width: 1024px) {
+    .portfolios {
+        margin: 0 2.5vw;
+    }
+    img {
+        width: 33%;
+        height: 50%;
+        padding-bottom: 0.5%;
+    }
+}
