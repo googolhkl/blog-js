@@ -37,19 +37,19 @@ header {
     color: black;
 }
 
+/* menu sidebar */
+nav ul {
+    list-style: none;
+}
+.menu-wrapper {
+	position: fixed;
+	font-size: 22px;
+}
 .menu-wrapper a {
     text-decoration: none;
 	color: black;
 	font-weight: 500;
 }
-nav ul {
-    list-style: none;
-}
-
-.menu-wrapper {
-	font-size: 22px;
-}
-
 #main-menu, #social {
     /* display: none; */
     text-decoration: none;
@@ -57,23 +57,28 @@ nav ul {
 	text-align: center;
 	padding: 0;
 }
-
 #main-menu {
+	margin: 0;
+	width: 100vw;
+	height: 15em;
+	background-color: white;
 	border-bottom-style: solid;
 	border-bottom-color: #eeeeee;
 	border-bottom-width: 1px;
 }
-#main-menu li{
-	margin: 1em 0 1em 0;
-}
-
 #social {
+	margin: 0;
+	width: 100vw;
+	height: 2em;
+	background-color: white;
 	font-size: 40px;
 }
-
+#main-menu li{
+	padding: 1em 0 1em 0;
+}
 #social li {
 	display: inline-block;
-	margin: 0 0.3em;
+	margin: 0.5em 0.3em;
 }
 
 /* Mobile M*/
