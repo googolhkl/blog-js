@@ -3,7 +3,7 @@ import { Resume } from '../resume/shared/resume.model';
 export const RESUME: Resume = {
     name: 'KYEONGHOON LEE',
     privateInformation: {
-        'photoUrl': 'https://s3.ap-northeast-2.amazonaws.com/apollon/about/me2.jpg',
+        'photoUrl': 'https://s3.ap-northeast-2.amazonaws.com/apollon/photo/me.jpeg',
         'name': '이경훈 (李敬薰)',
         'birth': '1991년 5월 16일',
         'home': '서울특별시 강남구 언주로 79길 20',

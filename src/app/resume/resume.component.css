@@ -11,10 +11,18 @@
 /* PRIVATE INFORMATION */
 img {
     display: block;
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     margin: 0 auto;
 }
+@media (min-width: 525px) {
+    img {
+        width: 30%;
+        height: 30%;
+        margin: 0;
+    }
+}
+
 .my-information {
     margin-top: 1em;
     width: 85vw;
