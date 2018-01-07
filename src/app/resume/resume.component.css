@@ -64,6 +64,7 @@ sui-progress {
     float: right;
     clear: right;
     margin-bottom: 0;
+    z-index: -1;
 }
 .ui.progress:last-child {
     margin-bottom: 0;
