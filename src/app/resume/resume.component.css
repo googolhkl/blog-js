@@ -11,13 +11,13 @@
 /* PRIVATE INFORMATION */
 img {
     display: block;
-    width: 19em;
-    height: 19em;
+    width: 40%;
+    height: 40%;
     margin: 0 auto;
 }
 .my-information {
     margin-top: 1em;
-    width: 19em;
+    width: 85vw;
 }
 
 .name-title {
@@ -72,7 +72,7 @@ sui-progress {
 /* EDUCATION */
 .education {
     margin-top: 2em;
-    width: 19em;
+    width: 85vw;
 }
 .education-title {
     margin-top: 2em;
@@ -101,7 +101,7 @@ sui-progress {
 /* EXPERIENCE */
 .experience {
     margin-top: 2em;
-    width: 19em;
+    width: 85vw;
 }
 .experience-title {
     font-size: 1em;
@@ -142,7 +142,7 @@ sui-progress {
 /* SELF-INTRODUCTION */
 .self-introduction {
     margin-top: 1em;
-    width: 19em;
+    width: 85vw;
 }
 .self-introduction-title {
     font-size: 1em;
