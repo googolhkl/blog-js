@@ -60,7 +60,7 @@ nav ul {
 #main-menu {
 	margin: 0;
 	width: 100vw;
-	height: 15em;
+	height: 70vh;
 	background-color: white;
 	border-bottom-style: solid;
 	border-bottom-color: #eeeeee;
@@ -69,7 +69,7 @@ nav ul {
 #social {
 	margin: 0;
 	width: 100vw;
-	height: 2em;
+	height: 30vh;
 	background-color: white;
 	font-size: 40px;
 }
