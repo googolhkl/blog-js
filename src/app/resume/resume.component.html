@@ -1,4 +1,4 @@
-<section>
+<section class="mobile">
   <div class="resume">
 
     <section>
@@ -91,6 +91,121 @@
         </div>
       </div>
     </section>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="pc">
+  <div class="resume">
+
+    <div class="block-horizontal">
+      <div class="left-side">
+        <div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div>
+        <section class="my-information">
+          <img src={{resume.privateInformation.photoUrl}} alt="이경훈사진">
+          <div class="info-list">
+            <p class="list-title hklfont">NAME</p>
+            <p class="list-value">{{resume.privateInformation.name}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">BIRTH</p>
+            <p class="list-value">{{resume.privateInformation.birth}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">HOME</p>
+            <p class="list-value">{{resume.privateInformation.home}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">PHONE</p>
+            <p class="list-value">{{resume.privateInformation.phone}}</p>
+          </div>
+          <div class="info-list">
+            <p class="list-title hklfont">MAIL</p>
+            <p class="list-value">{{resume.privateInformation.mail}}</p>
+          </div>
+          <p class="list-title hklfont">SKILL</p>
+          <div class="skill" *ngFor="let skill of resume.privateInformation.skills">
+            <div class="black hklfont">{{skill.name}}</div>
+            <sui-progress class="active small" [value]="skill.proficiency" [showProgress]="false" [maximum]="100" [precision]="0"></sui-progress>
+          </div>
+        </section>
+      </div>
+      <div class="right-side">
+        <div class="education hklfont">
+          <div class="education-title">EDUCATION</div>
+          <div *ngFor="let school of resume.education.schools">
+            <div class="school-information">
+              <div class="school-name">{{school.name}}</div>
+              <div class="school-department">{{school.department}}</div>
+              <div class="school-graduation-period">
+                {{school.periodStart}} - {{school.periodEnd}} | {{school.graduation}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-horizontal">
+      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div></div>
+      <div class="right-side">
+        <div class="experience-title">EXPERIENCE</div>
+        <div class="experience-host" *ngFor="let experience of resume.experiences">
+          <div class="experience-period">{{experience.periodStart}} - {{experience.periodEnd}}</div>
+          <div class="circle"></div><div class="experience-host-name">{{experience.host}}</div>
+          <div class="experience-project" *ngFor="let project of experience.projects">
+            <div class="experience-project-name">{{project.name}}</div>
+            <div class="experience-project-role">| {{project.role}}</div>
+            <div class="experience-project-description">{{project.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-horizontal">
+      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div></div>
+      <div class="right-side">
+        <div class="self-introduction hklfont">
+          <div class="self-introduction-title">SELF INTRODUCTION</div>
+          <div class="self-introduction-section" *ngFor="let selfIntroduction of resume.selfIntroductions">
+            <div class="self-introduction-subject hklfont">
+              {{selfIntroduction.subject}}
+            </div>
+            <div class="self-introduction-description">
+              {{selfIntroduction.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 
   </div>
 </section>

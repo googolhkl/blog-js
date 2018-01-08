@@ -1,169 +1,460 @@
-/* COMMON */
-.hklfont {
-    font-family: 'Montserrat', sans-serif;
-}
-.section-inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@media (min-width:320px) {
+    /* COMMON */
+    .pc {
+        display: none;
+    }
+    .hklfont {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .section-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* PRIVATE INFORMATION */
-img {
-    display: block;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-}
-@media (min-width: 525px) {
+    /* PRIVATE INFORMATION */
     img {
-        width: 30%;
-        height: 30%;
+        display: block;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+    }
+    @media (min-width: 525px) {
+        img {
+            width: 30%;
+            height: 30%;
+            margin: 0;
+        }
+    }
+
+    .my-information {
+        margin-top: 1em;
+        width: 85vw;
+    }
+
+    .name-title {
+        text-align: center;
+        color: #333333;
+        font-size: 21px;
+    }
+
+    .info-list {
+        clear: left;
+        height: 1em;
+        margin: 1em 0;
+    }
+    .list-title {
+        display: block;
+        float: left;
+        width: 5em;
+        color: #333333;
+        font-weight: 900;
         margin: 0;
+        height: 19px;
+    }
+
+    .list-value {
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 19px;
+        margin: 0;
+    }
+
+    .skill {
+        clear: left;
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    .black {
+        display: inline;
+        color: #000000;
+    }
+
+    sui-progress {
+        width: 70%;
+        float: right;
+        clear: right;
+        margin-bottom: 0;
+        z-index: -1;
+    }
+    .ui.progress:last-child {
+        margin-bottom: 0;
+    }
+
+    /* EDUCATION */
+    .education {
+        margin-top: 2em;
+        width: 85vw;
+    }
+    .education-title {
+        margin-top: 2em;
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .school-information {
+        margin: 1em 0;
+    }
+    .school-name {
+        font-size: 11px;
+        font-weight: bold;
+        color: #000000;
+    }
+    .school-department{
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+    }
+    .school-graduation-period{
+        font-size: 10px;
+    }
+
+    /* EXPERIENCE */
+    .experience {
+        margin-top: 2em;
+        width: 85vw;
+    }
+    .experience-title {
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .experience-host {
+        margin: 1em 0;
+    }
+    .experience-host-name {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        float: left;
+    }
+    .experience-period {
+        margin: 0 0.5em;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .experience-project {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+    .experience-project-name {
+        font-size: 11px;
+        font-weight: bold;
+        color: #000000;
+        float: left;
+    }
+    .experience-project-role {
+        margin: 0 0.5em;
+        font-size: 11px;
+        display: inline-block;
+    }
+
+    /* SELF-INTRODUCTION */
+    .self-introduction {
+        margin-top: 1em;
+        width: 85vw;
+    }
+    .self-introduction-title {
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .self-introduction-section {
+        margin: 1em 0;
+    }
+    .self-introduction-subject {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
     }
 }
 
-.my-information {
-    margin-top: 1em;
-    width: 85vw;
-}
 
-.name-title {
-    text-align: center;
-    color: #333333;
-    font-size: 21px;
-}
 
-.info-list {
-    clear: left;
-    height: 1em;
-    margin: 1em 0;
-}
-.list-title {
-    display: block;
-    float: left;
-    width: 5em;
-    color: #333333;
-    font-weight: 900;
-    margin: 0;
-    height: 19px;
-}
 
-.list-value {
-    display: block;
-    float: left;
-    font-size: 12px;
-    line-height: 19px;
-    margin: 0;
-}
 
-.skill {
-    clear: left;
-    display: block;
-    margin-bottom: 0.5em;
-}
-.black {
-    display: inline;
-    color: #000000;
-}
 
-sui-progress {
-    width: 70%;
-    float: right;
-    clear: right;
-    margin-bottom: 0;
-    z-index: -1;
-}
-.ui.progress:last-child {
-    margin-bottom: 0;
-}
 
-/* EDUCATION */
-.education {
-    margin-top: 2em;
-    width: 85vw;
-}
-.education-title {
-    margin-top: 2em;
-    font-size: 1em;
-    font-weight: bold;
-    color: #000000;
-    letter-spacing: 2px;
-}
-.school-information {
-    margin: 1em 0;
-}
-.school-name {
-    font-size: 11px;
-    font-weight: bold;
-    color: #000000;
-}
-.school-department{
-    font-size: 10px;
-    font-weight: bold;
-    color: #000000;
-}
-.school-graduation-period{
-    font-size: 10px;
-}
 
-/* EXPERIENCE */
-.experience {
-    margin-top: 2em;
-    width: 85vw;
-}
-.experience-title {
-    font-size: 1em;
-    font-weight: bold;
-    color: #000000;
-    letter-spacing: 2px;
-}
-.experience-host {
-    margin: 1em 0;
-}
-.experience-host-name {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000000;
-    float: left;
-}
-.experience-period {
-    margin: 0 0.5em;
-    font-size: 14px;
-    display: inline-block;
-}
-.experience-project {
-    margin-left: 1em;
-    margin-bottom: 1em;
-}
-.experience-project-name {
-    font-size: 11px;
-    font-weight: bold;
-    color: #000000;
-    float: left;
-}
-.experience-project-role {
-    margin: 0 0.5em;
-    font-size: 11px;
-    display: inline-block;
-}
 
-/* SELF-INTRODUCTION */
-.self-introduction {
-    margin-top: 1em;
-    width: 85vw;
-}
-.self-introduction-title {
-    font-size: 1em;
-    font-weight: bold;
-    color: #000000;
-    letter-spacing: 2px;
-}
-.self-introduction-section {
-    margin: 1em 0;
-}
-.self-introduction-subject {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1024px) {
+    /* COMMON */
+    .hklfont {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .mobile {
+        display: none;
+    }
+    .pc {
+        display: block; 
+    }
+    .resume {
+        margin: 10vh 10vw;
+    }
+    .block-horizontal {
+        display: flex;
+        flex-direction: row;
+    }
+    .left-side {
+        border-color: red;
+        border-width: 1px;
+        border-style: solid;
+        width: 30vw;
+        float: left;
+        display: inline-block;
+    }
+    .right-side {
+        border-color: green;
+        border-width: 1px;
+        border-style: solid;
+        width: 50vw;
+        display: inline-block;
+        clear: left;
+    }
+    .name-title {
+        text-align: left;
+        color: #000000;
+        font-size: 3vw;
+        width: 30vw;
+    }
+
+    /* PRIVATE INFORMATION */
+    img {
+        width: 20%;
+        height: 20%;
+        margin: 0;
+    }
+    .my-information {
+        margin: 0;
+    }
+    .skill {
+        clear: left;
+        display: block;
+        width: 20vw;
+        margin: 0;
+        display: block;
+    }
+    .black {
+        display: inline-block;
+        color: #000000;
+    }
+    sui-progress {
+        width: 10vw;
+        float: right;
+        clear: right;
+        margin-bottom: 0;
+        z-index: -1;
+    }
+
+
+
+
+
+
+    /* SELF-INTRODUCTION */
+    .self-introduction-title {
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .self-introduction-section {
+        margin: 1em 0;
+        width: 50vw;
+    }
+    .self-introduction-subject {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        position: relative;
+        left: -8em;
+        top: 1.3em;
+    }
+    .self-introduction-description {
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-list {
+        clear: left;
+        height: 1em;
+        margin: 1em 0;
+    }
+    .list-title {
+        display: block;
+        float: left;
+        width: 5em;
+        color: #333333;
+        font-weight: 900;
+        margin: 0;
+        height: 19px;
+    }
+
+    .list-value {
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 19px;
+        margin: 0;
+    }
+
+    .ui.progress:last-child {
+        margin-bottom: 0;
+    }
+
+    /* EDUCATION */
+    .education {
+        margin-top: 2em;
+        width: 85vw;
+    }
+    .education-title {
+        margin-top: 2em;
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .school-information {
+        margin: 1em 0;
+    }
+    .school-name {
+        font-size: 11px;
+        font-weight: bold;
+        color: #000000;
+    }
+    .school-department{
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+    }
+    .school-graduation-period{
+        font-size: 10px;
+    }
+
+    /* EXPERIENCE */
+    .experience {
+        margin-top: 2em;
+        width: 85vw;
+    }
+    .experience-title {
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .experience-host {
+        margin: 1em 0;
+    }
+    .circle {
+        border: 0.1em solid #6c6c6c;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        float: left;
+        left: -9.5em;
+        background-color: white;
+    }
+    .experience-host-name {
+        width: 30vw;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        position: relative;
+        left: -9.0em;
+    }
+    .experience-period {
+        margin: 0 0.5em;
+        font-size: 14px;
+        display: inline-block;
+        position: relative;
+        left: -10em;
+        float: left;
+    }
+    .experience-project {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+    .experience-project-name {
+        font-size: 11px;
+        font-weight: bold;
+        color: #000000;
+        float: left;
+        clear: left;
+    }
+    .experience-project-role {
+        margin: 0 0.5em;
+        font-size: 11px;
+        display: inline-block;
+    }
+
 }

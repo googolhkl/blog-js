@@ -107,7 +107,7 @@ export const RESUME: Resume = {
             ]
         },
         {
-            'host': 'H&B Life2',
+            'host': 'H&B Life2aaa',
             'periodStart': '2012.01',
             'periodEnd': '2014-01',
             'projects': [
