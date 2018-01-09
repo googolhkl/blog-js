@@ -215,19 +215,17 @@
     .block-horizontal {
         display: flex;
         flex-direction: row;
+        margin-bottom: 10vh;
     }
     .left-side {
-        border-color: red;
-        border-width: 1px;
-        border-style: solid;
+        border-right-color: #f6f4f1;
+        border-right-width: 1px;
+        border-right-style: solid;
         width: 30vw;
         float: left;
         display: inline-block;
     }
     .right-side {
-        border-color: green;
-        border-width: 1px;
-        border-style: solid;
         width: 50vw;
         display: inline-block;
         clear: left;
@@ -236,55 +234,200 @@
         text-align: left;
         color: #000000;
         font-size: 3vw;
-        width: 30vw;
+        margin-top: 0.2em;
+        width: 25vw;
+        margin-bottom: 5vh;
     }
 
     /* PRIVATE INFORMATION */
     img {
         width: 20%;
         height: 20%;
-        margin: 0;
+        margin: 5vh 0;
     }
     .my-information {
         margin: 0;
     }
+    .info-list {
+        clear: left;
+        height: 2vh;
+        margin: 1em 0;
+        width: 30vw;
+    }
+    .list-title {
+        display: block;
+        float: left;
+        color: #111111;
+        font-weight: 900;
+        margin: 0;
+        width: 8vw;
+        height: 2vh;
+        font-size: 1.2vw;
+    }
+    .list-value {
+        display: block;
+        float: left;
+        color: #222222;
+        line-height: 3vh;
+        margin: 0;
+        font-size: 1.1vw;
+        width: 20vw;
+    }
+    .skill-title {
+        width: 30vw;
+        margin-bottom: 2vh;
+    }
     .skill {
         clear: left;
         display: block;
-        width: 20vw;
-        margin: 0;
+        width: 22vw;
+        margin: 2vh 0;
         display: block;
+        height: 1em;
     }
     .black {
         display: inline-block;
         color: #000000;
+        font-size: 1.2vw;
+        line-height: 1.2vw;
+        height: 1.2vw;
     }
     sui-progress {
-        width: 10vw;
+        width: 14vw;
         float: right;
         clear: right;
         margin-bottom: 0;
         z-index: -1;
     }
+    .ui.progress:last-child {
+        margin-bottom: 0;
+    }
 
+    /* EDUCATION */
+    .education {
+        width: 40vw;
+        margin: 0 5vw;
+    }
+    .education-title {
+        margin-top: 3vh;
+        margin-bottom: 13vh;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 0.3vw;
+        height: 2vh;
+    }
+    .school-information {
+        margin: 1em 0;
+    }
+    .school-name {
+        font-weight: bold;
+        color: #000000;
+        font-size: 1.2vw;
+        height: 1.2vw;
+        line-height: 1.2vw;
+        margin-bottom: 3vh;
+    }
+    .school-department{
+        font-weight: bold;
+        color: #000000;
+        font-size: 1.1vw;
+        height: 1.1vw;
+        line-height: 1.1vw;
+        margin-bottom: 0.5vh;
+    }
+    .school-graduation-period{
+        font-size: 1vw;
+        height: 1vw;
+        line-height: 1vw;
+        margin-bottom: 10vh;
+    }
 
+    /* EXPERIENCE */
+    .experience {
+        width: 50vw;
+    }
+    .experience-title {
+        margin: 3vh 5vw 13vh 5vw;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 0.3vw;
+        height: 2vh;
+    }
+    .experience-host {
+        margin: 1em 0;
+    }
+    .experience-period {
+        margin: 0;
+        font-size: 1vw;
+        display: inline-block;
+        position: relative;
+        left: -10em;
+        float: left;
+    }
+    .circle {
+        border: 0.1em solid #6c6c6c;
+        font-size: 1vw;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        float: left;
+        left: -8.5em;
+        background-color: white;
+    }
+    .experience-host-name {
+        width: 30vw;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #000000;
+        position: relative;
+        left: -6.0em;
+        margin-left: 5vw;
+    }
+    .experience-project {
+        margin: 0 5vw;
+    }
+    .experience-project-name {
+        font-size: 0.8vw;
+        font-weight: bold;
+        color: #000000;
+        float: left;
+        clear: left;
+    }
+    .experience-project-role {
+        margin: 0 0.5em;
+        font-size: 0.8vw;
+        display: inline-block;
+        line-height: 0.8vw;
+        height: 0.8vw;
+    }
+    .experience-project-description {
+        font-size: 1vw;
 
-
+    }
 
 
     /* SELF-INTRODUCTION */
-    .self-introduction-title {
-        font-size: 1em;
-        font-weight: bold;
-        color: #000000;
-        letter-spacing: 2px;
-    }
-    .self-introduction-section {
-        margin: 1em 0;
+    .self-introduction {
         width: 50vw;
     }
+    .self-introduction-title {
+        margin: 3vh 5vw 13vh 5vw;
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 0.3vw;
+        height: 2vh;
+        line-height: 1.5vw;
+        width: 5vw;
+    }
     .self-introduction-subject {
-        font-size: 14px;
+        font-size: 1.2vw;
+        line-height: 1.2vw;
+        height: 1.2vw;
         font-weight: bold;
         color: #000000;
         position: relative;
@@ -293,168 +436,7 @@
     }
     .self-introduction-description {
         display: block;
+        font-size: 1vw;
+        margin: 0 5vw;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .section-inner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info-list {
-        clear: left;
-        height: 1em;
-        margin: 1em 0;
-    }
-    .list-title {
-        display: block;
-        float: left;
-        width: 5em;
-        color: #333333;
-        font-weight: 900;
-        margin: 0;
-        height: 19px;
-    }
-
-    .list-value {
-        display: block;
-        float: left;
-        font-size: 12px;
-        line-height: 19px;
-        margin: 0;
-    }
-
-    .ui.progress:last-child {
-        margin-bottom: 0;
-    }
-
-    /* EDUCATION */
-    .education {
-        margin-top: 2em;
-        width: 85vw;
-    }
-    .education-title {
-        margin-top: 2em;
-        font-size: 1em;
-        font-weight: bold;
-        color: #000000;
-        letter-spacing: 2px;
-    }
-    .school-information {
-        margin: 1em 0;
-    }
-    .school-name {
-        font-size: 11px;
-        font-weight: bold;
-        color: #000000;
-    }
-    .school-department{
-        font-size: 10px;
-        font-weight: bold;
-        color: #000000;
-    }
-    .school-graduation-period{
-        font-size: 10px;
-    }
-
-    /* EXPERIENCE */
-    .experience {
-        margin-top: 2em;
-        width: 85vw;
-    }
-    .experience-title {
-        font-size: 1em;
-        font-weight: bold;
-        color: #000000;
-        letter-spacing: 2px;
-    }
-    .experience-host {
-        margin: 1em 0;
-    }
-    .circle {
-        border: 0.1em solid #6c6c6c;
-        width: 1em;
-        height: 1em;
-        border-radius: 50%;
-        display: block;
-        position: relative;
-        float: left;
-        left: -9.5em;
-        background-color: white;
-    }
-    .experience-host-name {
-        width: 30vw;
-        font-size: 14px;
-        font-weight: bold;
-        color: #000000;
-        position: relative;
-        left: -9.0em;
-    }
-    .experience-period {
-        margin: 0 0.5em;
-        font-size: 14px;
-        display: inline-block;
-        position: relative;
-        left: -10em;
-        float: left;
-    }
-    .experience-project {
-        margin-left: 1em;
-        margin-bottom: 1em;
-    }
-    .experience-project-name {
-        font-size: 11px;
-        font-weight: bold;
-        color: #000000;
-        float: left;
-        clear: left;
-    }
-    .experience-project-role {
-        margin: 0 0.5em;
-        font-size: 11px;
-        display: inline-block;
-    }
-
 }

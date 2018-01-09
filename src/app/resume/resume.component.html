@@ -124,7 +124,7 @@
 
     <div class="block-horizontal">
       <div class="left-side">
-        <div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div>
+        <div class="name-title hklfont"><p>{{resume.name}}</p></div>
         <section class="my-information">
           <img src={{resume.privateInformation.photoUrl}} alt="이경훈사진">
           <div class="info-list">
@@ -147,15 +147,18 @@
             <p class="list-title hklfont">MAIL</p>
             <p class="list-value">{{resume.privateInformation.mail}}</p>
           </div>
-          <p class="list-title hklfont">SKILL</p>
-          <div class="skill" *ngFor="let skill of resume.privateInformation.skills">
-            <div class="black hklfont">{{skill.name}}</div>
-            <sui-progress class="active small" [value]="skill.proficiency" [showProgress]="false" [maximum]="100" [precision]="0"></sui-progress>
+          <div class="info-list">
+            <p class="list-title skill-title hklfont">SKILL</p>
+            <div class="skill" *ngFor="let skill of resume.privateInformation.skills">
+              <div class="black hklfont">{{skill.name}}</div>
+              <sui-progress class="active small" [value]="skill.proficiency" [showProgress]="false" [maximum]="100" [precision]="0"></sui-progress>
+            </div>
           </div>
+
         </section>
       </div>
       <div class="right-side">
-        <div class="education hklfont">
+        <section class="education hklfont">
           <div class="education-title">EDUCATION</div>
           <div *ngFor="let school of resume.education.schools">
             <div class="school-information">
@@ -166,32 +169,35 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
 
     <div class="block-horizontal">
-      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div></div>
+      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}</p></div></div>
       <div class="right-side">
-        <div class="experience-title">EXPERIENCE</div>
-        <div class="experience-host" *ngFor="let experience of resume.experiences">
-          <div class="experience-period">{{experience.periodStart}} - {{experience.periodEnd}}</div>
-          <div class="circle"></div><div class="experience-host-name">{{experience.host}}</div>
-          <div class="experience-project" *ngFor="let project of experience.projects">
-            <div class="experience-project-name">{{project.name}}</div>
-            <div class="experience-project-role">| {{project.role}}</div>
-            <div class="experience-project-description">{{project.description}}</div>
-          </div>
-        </div>
+        <section class="experience hklfont">
+            <div class="experience-title">EXPERIENCE</div>
+            <div class="experience-host" *ngFor="let experience of resume.experiences">
+              <div class="experience-period">{{experience.periodStart}} - {{experience.periodEnd}}</div>
+              <div class="circle"></div><div class="experience-host-name">{{experience.host}}</div>
+              <div class="experience-project" *ngFor="let project of experience.projects">
+                <div class="experience-project-name">{{project.name}}</div>
+                <div class="experience-project-role">| {{project.role}}</div>
+                <div class="experience-project-description">{{project.description}}</div>
+              </div>
+            </div>
+        </section>
+
       </div>
     </div>
 
     <div class="block-horizontal">
-      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}[PC]</p></div></div>
+      <div class="left-side"><div class="name-title hklfont"><p>{{resume.name}}</p></div></div>
       <div class="right-side">
-        <div class="self-introduction hklfont">
+        <section class="self-introduction hklfont">
           <div class="self-introduction-title">SELF INTRODUCTION</div>
-          <div class="self-introduction-section" *ngFor="let selfIntroduction of resume.selfIntroductions">
+          <div *ngFor="let selfIntroduction of resume.selfIntroductions">
             <div class="self-introduction-subject hklfont">
               {{selfIntroduction.subject}}
             </div>
@@ -199,7 +205,7 @@
               {{selfIntroduction.description}}
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
 
