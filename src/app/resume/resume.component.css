@@ -215,20 +215,21 @@
     .block-horizontal {
         display: flex;
         flex-direction: row;
-        margin-bottom: 10vh;
     }
     .left-side {
         border-right-color: #f6f4f1;
-        border-right-width: 1px;
+        border-right-width: 2px;
         border-right-style: solid;
         width: 30vw;
         float: left;
         display: inline-block;
+        padding-bottom: 10vh;
     }
     .right-side {
         width: 50vw;
         display: inline-block;
         clear: left;
+        padding-bottom: 10vh;
     }
     .name-title {
         text-align: left;
