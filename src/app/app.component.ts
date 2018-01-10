@@ -10,6 +10,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 export class AppComponent {
   title = 'app';
   is_show_menu = false;
+  hamberger = false;
 
   toggleMenu(): void {
     this.is_show_menu = !this.is_show_menu;
