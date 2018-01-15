@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { SIDEBAR, POSTS } from '../mocks/blog-sidebar';
 
 @Component({
@@ -10,9 +12,9 @@ export class BlogSidebarComponent implements OnInit {
   sidebar = SIDEBAR;
   postContentMode= 'list';
   posts = POSTS;
-  post = this.posts[0];
+  post: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -29,6 +31,9 @@ export class BlogSidebarComponent implements OnInit {
 
   getPostByID(id: String) {
       this.postContentMode = 'detail';
+      this.http.get('http://localhost:8000/posts/279').subscribe(data => {
+          this.post = data;
+      });
       console.log(id);
   }
 
