@@ -1,14 +1,14 @@
 <aside>
   <div class="blog-sidebar section-inner-wrapper hklfont">
 
-    <div class="section-inner">
-      <div class="blog-sidebar-category" *ngFor="let category of sidebar.categories" (click)="getPostByCategory(category.name)">
+    <div class="section-inner" *ngIf="categories">
+      <div class="blog-sidebar-category" *ngFor="let category of categories" (click)="getPostByCategory(category.name)">
         <p>{{category.name}}</p>
       </div>
     </div>
 
     <div class="section-inner">
-      <div class="blog-sidebar-tag" *ngFor="let tag of sidebar.tags" (click)="getPostByTag(tag.name)">
+      <div class="blog-sidebar-tag" *ngFor="let tag of tags" (click)="getPostByTag(tag.name)">
         <p>#{{tag.name}}</p>
       </div>
     </div>

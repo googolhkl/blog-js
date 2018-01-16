@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { SIDEBAR, POSTS } from '../mocks/blog-sidebar';
+import { Sidebar } from '../blog-sidebar/shared/blog-sidebar.model';
 
 @Component({
   selector: 'app-blog',
@@ -9,32 +9,47 @@ import { SIDEBAR, POSTS } from '../mocks/blog-sidebar';
   styleUrls: ['./blog-sidebar.component.css']
 })
 export class BlogSidebarComponent implements OnInit {
-  sidebar = SIDEBAR;
+  categories: any;
+  tags: any;
   postContentMode= 'list';
-  posts = POSTS;
+  posts: any;
   post: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+      this.http.get('http://localhost:8000/posts').subscribe(data => {
+          this.posts = data['results'];
+      });
+      this.http.get('http://localhost:8000/categories').subscribe(data => {
+          this.categories = data;
+      });
+      this.http.get('http://localhost:8000/tags').subscribe(data => {
+          this.tags = data;
+      });
   }
 
   getPostByCategory(category: String) {
       this.postContentMode = 'list';
-      console.log(category);
+      this.posts = null;
+      this.http.get(`http://localhost:8000/posts?type=category&name=${category}`).subscribe(data => {
+          this.posts = data['results'];
+      });
   }
 
   getPostByTag(tag: String) {
       this.postContentMode = 'list';
-      console.log(tag);
+      this.posts = null;
+      this.http.get(`http://localhost:8000/posts?type=tag&name=${tag}`).subscribe(data => {
+          this.posts = data['results'];
+      });
   }
 
   getPostByID(id: String) {
       this.postContentMode = 'detail';
-      this.http.get('http://localhost:8000/posts/279').subscribe(data => {
+      this.post = null;
+      this.http.get(`http://localhost:8000/posts/${id}`).subscribe(data => {
           this.post = data;
       });
-      console.log(id);
   }
-
 }
