@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PORTFOLIOES } from '../mocks/portfolios';
 
 @Component({
@@ -7,11 +8,15 @@ import { PORTFOLIOES } from '../mocks/portfolios';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  portfolios = PORTFOLIOES;
+  portfolios: any = null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+      this.http.get('http://localhost:8000/portfolios').subscribe(data => {
+        console.log('hello');
+        this.portfolios = data;
+      });
   }
 
 }
