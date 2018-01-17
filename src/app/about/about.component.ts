@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ABOUT } from '../mocks/about';
 
 @Component({
@@ -7,11 +8,14 @@ import { ABOUT } from '../mocks/about';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  about = ABOUT;
+  about: any = null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+      this.http.get('http://localhost:8000/about').subscribe(data => {
+          this.about = data;
+      });
   }
 
 }

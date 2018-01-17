@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { PORTFOLIOES } from '../mocks/portfolios';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,7 +13,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
       this.http.get('http://localhost:8000/portfolios').subscribe(data => {
-        console.log('hello');
         this.portfolios = data;
       });
   }

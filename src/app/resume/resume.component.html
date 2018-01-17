@@ -1,4 +1,4 @@
-<section class="mobile">
+<section class="mobile" *ngIf="resume">
   <div class="resume">
 
     <section>
@@ -84,9 +84,7 @@
             <div class="self-introduction-subject hklfont">
               {{selfIntroduction.subject}}
             </div>
-            <div class="self-introduction-description">
-              {{selfIntroduction.description}}
-            </div>
+            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description"></div>
           </div>
         </div>
       </div>
@@ -95,31 +93,7 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="pc">
+<section class="pc" *ngIf="resume">
   <div class="resume">
 
     <div class="block-horizontal">
@@ -201,17 +175,10 @@
             <div class="self-introduction-subject hklfont">
               {{selfIntroduction.subject}}
             </div>
-            <div class="self-introduction-description">
-              {{selfIntroduction.description}}
-            </div>
+            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description"></div>
           </div>
         </section>
       </div>
     </div>
-
-
-
-
-
   </div>
 </section>

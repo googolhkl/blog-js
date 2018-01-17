@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RESUME } from '../mocks/resume';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-resume',
@@ -7,11 +7,15 @@ import { RESUME } from '../mocks/resume';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent implements OnInit {
-  resume = RESUME;
+  resume: any = null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+      this.http.get('http://localhost:8000/resume').subscribe(data => {
+        console.log(data);
+        this.resume = data;
+      });
   }
 
 }
