@@ -12,7 +12,7 @@ export class ResumeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://localhost:8000/resume').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/resume').subscribe(data => {
         console.log(data);
         this.resume = data;
       });

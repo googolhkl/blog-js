@@ -18,13 +18,13 @@ export class BlogSidebarComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://localhost:8000/posts').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/posts').subscribe(data => {
           this.posts = data['results'];
       });
-      this.http.get('http://localhost:8000/categories').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/categories').subscribe(data => {
           this.categories = data;
       });
-      this.http.get('http://localhost:8000/tags').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/tags').subscribe(data => {
           this.tags = data;
       });
   }
@@ -32,7 +32,7 @@ export class BlogSidebarComponent implements OnInit {
   getPostByCategory(category: String) {
       this.postContentMode = 'list';
       this.posts = null;
-      this.http.get(`http://localhost:8000/posts?type=category&name=${category}`).subscribe(data => {
+      this.http.get(`http://api.googolhkl.com/posts?type=category&name=${category}`).subscribe(data => {
           this.posts = data['results'];
       });
   }
@@ -40,7 +40,7 @@ export class BlogSidebarComponent implements OnInit {
   getPostByTag(tag: String) {
       this.postContentMode = 'list';
       this.posts = null;
-      this.http.get(`http://localhost:8000/posts?type=tag&name=${tag}`).subscribe(data => {
+      this.http.get(`http://api.googolhkl.com/posts?type=tag&name=${tag}`).subscribe(data => {
           this.posts = data['results'];
       });
   }
@@ -48,7 +48,7 @@ export class BlogSidebarComponent implements OnInit {
   getPostByID(id: String) {
       this.postContentMode = 'detail';
       this.post = null;
-      this.http.get(`http://localhost:8000/posts/${id}`).subscribe(data => {
+      this.http.get(`http://api.googolhkl.com/posts/${id}`).subscribe(data => {
           this.post = data;
       });
   }

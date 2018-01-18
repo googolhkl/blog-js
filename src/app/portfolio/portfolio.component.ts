@@ -12,7 +12,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://localhost:8000/portfolios').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/portfolios').subscribe(data => {
         this.portfolios = data;
       });
   }

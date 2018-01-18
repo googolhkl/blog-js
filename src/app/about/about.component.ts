@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://localhost:8000/about').subscribe(data => {
+      this.http.get('http://api.googolhkl.com/about').subscribe(data => {
           this.about = data;
       });
   }
