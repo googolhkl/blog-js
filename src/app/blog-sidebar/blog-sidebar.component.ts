@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
 import { Post } from './shared/blog-sidebar.model';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
@@ -15,10 +17,18 @@ export class BlogSidebarComponent implements OnInit {
   postContentMode= 'list';
   posts: any;
   post: any;
+  postId: String;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.postId = this.route.snapshot.paramMap.get('id');
+    if (this.route.snapshot.paramMap.get('id') === null) {
+      this.postContentMode = 'list';
+    } else {
+      this.postContentMode = 'detail';
+      this.getPostByID(this.postId);
+    }
     this.http.get(`${environment.apiUrl}/posts`).subscribe(data => {
         this.posts = data['results'];
     });

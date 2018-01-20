@@ -15,7 +15,7 @@
     <div class="menu-wrapper" [ngStyle]="getMenuStyle()">
         <ul id="main-menu">
           <li><a routerLink="/" (click)="hamberger = !hamberger" (click)="toggleMenu()">WORK</a></li>
-          <li><a routerLink="/blog" (click)="hamberger = !hamberger" (click)="toggleMenu()">BLOG</a></li>
+          <li><a routerLink="/blog/posts" (click)="hamberger = !hamberger" (click)="toggleMenu()">BLOG</a></li>
           <li><a routerLink="/about" (click)="hamberger = !hamberger" (click)="toggleMenu()">ABOUT</a></li>
           <li><a routerLink="/resume" (click)="hamberger = !hamberger" (click)="toggleMenu()">RESUME</a></li>
         </ul>
@@ -32,7 +32,7 @@
       <div id="main-bar">
         <ul id="main-menu">
           <li><a routerLink="/">WORK</a></li>
-          <li><a routerLink="/blog">BLOG</a></li>
+          <li><a routerLink="/blog/posts">BLOG</a></li>
           <li><a routerLink="/about">ABOUT</a></li>
           <li><a routerLink="/resume">RESUME</a></li>
         </ul>

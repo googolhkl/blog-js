@@ -7,6 +7,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {SuiModule, SuiProgressModule} from 'ng2-semantic-ui';
 
+import {DisqusModule} from 'ngx-disqus';
 
 import {AppComponent} from './app.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
@@ -33,6 +34,7 @@ import {ResumeComponent} from './resume/resume.component';
     SuiModule,
     SuiProgressModule,
     HttpClientModule,
+    DisqusModule.forRoot('googolhkl'),
   ],
   providers: [],
   bootstrap: [AppComponent]

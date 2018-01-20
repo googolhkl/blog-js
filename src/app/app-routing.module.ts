@@ -8,7 +8,8 @@ import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent},
-  { path: 'blog', component: BlogSidebarComponent},
+  { path: 'blog/posts', component: BlogSidebarComponent},
+  { path: 'blog/posts/:id', component: BlogSidebarComponent},
   { path: 'about', component: AboutComponent},
   { path: 'resume', component: ResumeComponent},
   { path: '**', redirectTo: ''},
