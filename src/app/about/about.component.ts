@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ABOUT } from '../mocks/about';
+
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -13,9 +14,9 @@ export class AboutComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://api.googolhkl.com/about').subscribe(data => {
-          this.about = data;
-      });
+    this.http.get(`${environment.apiUrl}/about`).subscribe(data => {
+        this.about = data;
+    });
   }
 
 }

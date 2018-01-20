@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
@@ -12,10 +14,9 @@ export class ResumeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-      this.http.get('http://api.googolhkl.com/resume').subscribe(data => {
-        console.log(data);
-        this.resume = data;
-      });
+    this.http.get(`${environment.apiUrl}/resume`).subscribe(data => {
+      this.resume = data;
+    });
   }
 
 }
