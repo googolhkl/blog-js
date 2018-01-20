@@ -387,27 +387,32 @@
         position: relative;
         left: -6.0em;
         margin-left: 5vw;
+        margin-bottom: 1vh;
     }
     .experience-project {
-        margin: 0 5vw;
+        margin: 0 5vw 3vh 5vw;
     }
     .experience-project-name {
+        margin: 1vh 0;
         font-size: 0.8vw;
         font-weight: bold;
         color: #000000;
         float: left;
-        clear: left;
+        line-height: 2em;
+        height: 2vh;
     }
     .experience-project-role {
-        margin: 0 0.5em;
+        margin: 1vh 0.5em;
         font-size: 0.8vw;
         display: inline-block;
-        line-height: 0.8vw;
-        height: 0.8vw;
+        line-height: 2em;
+        height: 2vh;
+        clear:left;
     }
     .experience-project-description {
+        margin-bottom: 5vh;
         font-size: 1vw;
-
+        clear:left;
     }
 
 
