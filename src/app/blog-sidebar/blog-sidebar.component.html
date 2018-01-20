@@ -3,13 +3,13 @@
 
     <div class="section-inner" *ngIf="categories">
       <div class="blog-sidebar-category" *ngFor="let category of categories" (click)="getPostByCategory(category.name)">
-        <p>{{category.name}}</p>
+        <a routerLink="/blog/posts">{{category.name}}</a>
       </div>
     </div>
 
     <div class="section-inner">
       <div class="blog-sidebar-tag" *ngFor="let tag of tags" (click)="getPostByTag(tag.name)">
-        <p>#{{tag.name}}</p>
+        <a routerLink="/blog/posts">#{{tag.name}}</a>
       </div>
     </div>
 
