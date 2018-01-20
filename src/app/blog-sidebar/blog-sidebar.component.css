@@ -40,30 +40,45 @@
 /* POST LIST*/
 .post {
     padding: 1em 0;
+    margin: 3vh 0;
     border-bottom-color: #eeeeee;
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
+.post-link-thumbnail-box {
+    width: 70vw;
+    float: left;
+}
+.thumbnail {
+    clear: left;
+    margin-left: 2vw;
+    width: 10vw;
+}
 .post-title {
+    margin-bottom: 2vh;
     color: #000000;
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 1em;
 }
 .post-content {
     color: #aaaaaa;
     font-size: 14px;
 }
+.post-meta {
+    display: block;
+}
 .post-meta p {
     color: #6bacce;
-    float: left;
+    display: table-cell;
 }
 .post-category {
     text-transform: capitalize;
     font-size: 12px;
-    margin: 0;
+    padding-right: 1vw;
 }
 .post-tags {
-    margin: 0 2px;
     font-size: 12px;
+    padding-right: 1vw;
 }
 .post-created-at {
     color: #c0c0c0;

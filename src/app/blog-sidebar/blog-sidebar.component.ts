@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
+import { Post } from './shared/blog-sidebar.model';
 
 @Component({
   selector: 'app-blog',

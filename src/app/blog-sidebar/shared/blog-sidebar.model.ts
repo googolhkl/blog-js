@@ -10,4 +10,5 @@ export class Post {
     createdAt: String;
     category: String;
     tags: String[];
+    thumbnail: String;
 }
