@@ -43,6 +43,3 @@ Thumbs.db
 
 # 환경설정
 .env*
-
-# 실서버
-server/public/*
