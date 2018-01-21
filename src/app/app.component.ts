@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {Router, NavigationEnd} from '@angular/router';
 
 
 @Component({
@@ -11,6 +12,15 @@ export class AppComponent {
   title = 'app';
   is_show_menu = false;
   hamberger = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+     if (event instanceof NavigationEnd) {
+       (<any>window).ga('set', 'page', event.urlAfterRedirects);
+       (<any>window).ga('send', 'pageview');
+      }
+    });
+  }
 
   toggleMenu(): void {
     this.is_show_menu = !this.is_show_menu;
