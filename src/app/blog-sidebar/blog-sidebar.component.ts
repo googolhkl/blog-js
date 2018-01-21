@@ -6,20 +6,27 @@ import { Post } from './shared/blog-sidebar.model';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { PaginatorService } from '../paginator.service';
+
+
 @Component({
   selector: 'app-blog',
   templateUrl: './blog-sidebar.component.html',
-  styleUrls: ['./blog-sidebar.component.css']
+  styleUrls: ['./blog-sidebar.component.scss'],
+  providers: [PaginatorService]
 })
 export class BlogSidebarComponent implements OnInit {
   categories: any;
   tags: any;
-  postContentMode= 'list';
+  postContentMode = 'list';
   posts: any;
   post: any;
   postId: String;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute, private location: Location) { }
+  constructor(private http: HttpClient,
+              private route: ActivatedRoute,
+              private location: Location,
+              private paginator: PaginatorService) { }
 
   ngOnInit() {
     this.postId = this.route.snapshot.paramMap.get('id');
@@ -31,6 +38,7 @@ export class BlogSidebarComponent implements OnInit {
     }
     this.http.get(`${environment.apiUrl}/posts`).subscribe(data => {
         this.posts = data['results'];
+        this.paginator.slide(0, 0, 10);
     });
     this.http.get(`${environment.apiUrl}/categories`).subscribe(data => {
         this.categories = data;
