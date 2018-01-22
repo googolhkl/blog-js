@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {Router, NavigationEnd} from '@angular/router';
 
@@ -8,12 +8,14 @@ import {Router, NavigationEnd} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   is_show_menu = false;
   hamberger = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
     this.router.events.subscribe(event => {
      if (event instanceof NavigationEnd) {
        (<any>window).ga('set', 'page', event.urlAfterRedirects);
