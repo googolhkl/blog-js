@@ -16,6 +16,8 @@ import {AppRoutingModule} from './/app-routing.module';
 import {BlogSidebarComponent} from './blog-sidebar/blog-sidebar.component';
 import {ResumeComponent} from './resume/resume.component';
 
+import {SafeHtmlPipe} from './pipe.safehtml';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {ResumeComponent} from './resume/resume.component';
     PortfolioComponent,
     AboutComponent,
     BlogSidebarComponent,
-    ResumeComponent
+    ResumeComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,

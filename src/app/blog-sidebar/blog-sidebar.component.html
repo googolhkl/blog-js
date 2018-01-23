@@ -62,7 +62,7 @@
         <div class="post-detail-created-at">{{post.createdAt}}</div>
       </div>
 
-      <div class="post-detail-content" [innerHTML]="post.content"></div>
+      <div class="post-detail-content" [innerHTML]="post.content | safeHtml"></div>
       <disqus  *ngIf="post" [identifier]="undefined"></disqus>
     </div>
   </div>

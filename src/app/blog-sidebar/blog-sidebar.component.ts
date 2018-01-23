@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { PaginatorService } from '../paginator.service';
+declare var makePrism: any;
+declare var highlightPrism: any;
 
 
 @Component({
@@ -54,6 +56,9 @@ export class BlogSidebarComponent implements OnInit {
     this.http.get(`${environment.apiUrl}/tags`).subscribe(data => {
         this.tags = data;
     });
+    // prism.js
+    makePrism();
+    highlightPrism();
   }
 
   pagenate(current: number, offset: number, total: number) {
