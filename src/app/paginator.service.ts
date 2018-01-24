@@ -9,9 +9,6 @@ export class PaginatorService {
     const pl: any = document.querySelector( '.paginate.right' );
 
     index = Math.min( Math.max( index + offset, 0 ), total - 1 );
-    // pr.onclick = this.slide.bind( this, index, -1, total );
-    // pl.onclick = this.slide.bind( this, index, 1, total );
-
     try {
       document.querySelector( '.counter' ).innerHTML = ( index + 1) + ' / ' + total;
       pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );

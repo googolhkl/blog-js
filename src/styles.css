@@ -21,6 +21,32 @@
         font-family: Cambria, Georgia;
       }
 
+    /* Post Detail */
+    .post-detail-content h1, h2, h3, h4 {
+      color: black;
+    }
+    .post-detail-content a {
+      color: #6bacce;
+    }
+    .post-detail-content ul, ol {
+      color: black;
+      font-size: 1em;
+    }
+    .post-detail-content ul, li {
+      margin: 1em 0;
+    }
+    .post-detail-content blockquote {
+      background-color: #ddf4ff;
+      padding: 1em;
+      color: #14506e;
+    }
+    .post-detail-content table {
+      border-collapse: collapse;
+    }
+    .post-detail-content table, th, td{
+      border: 1px solid black;
+    }
+
       /* everywhere else */
       * {
       }
