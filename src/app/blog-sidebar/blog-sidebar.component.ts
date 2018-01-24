@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
@@ -18,7 +18,7 @@ declare var highlightPrism: any;
   styleUrls: ['./blog-sidebar.component.scss'],
   providers: [PaginatorService]
 })
-export class BlogSidebarComponent implements OnInit {
+export class BlogSidebarComponent implements OnInit, AfterViewChecked {
   searchMode: String = '';
   category: String;
   tag: String;
@@ -49,7 +49,6 @@ export class BlogSidebarComponent implements OnInit {
         this.posts = data['results'];
         this.currentPage = data['current_page'] - 1;
         this.numPages = data['num_pages'];
-        this.paginator.slide(this.currentPage, 0, this.numPages);
     });
     this.http.get(`${environment.apiUrl}/categories`).subscribe(data => {
         this.categories = data;
@@ -57,6 +56,10 @@ export class BlogSidebarComponent implements OnInit {
     this.http.get(`${environment.apiUrl}/tags`).subscribe(data => {
         this.tags = data;
     });
+  }
+
+  ngAfterViewChecked() {
+    this.paginator.slide(this.currentPage, 0, this.numPages);
   }
 
   pagenate(current: number, offset: number, total: number) {

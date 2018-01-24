@@ -12,9 +12,12 @@ export class PaginatorService {
     // pr.onclick = this.slide.bind( this, index, -1, total );
     // pl.onclick = this.slide.bind( this, index, 1, total );
 
-    document.querySelector( '.counter' ).innerHTML = ( index + 1) + ' / ' + total;
+    try {
+      document.querySelector( '.counter' ).innerHTML = ( index + 1) + ' / ' + total;
+      pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );
+      pl.setAttribute( 'data-state', index === total - 1 ? 'disabled' : '' );
+    } catch (e) {
+    }
 
-    pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );
-    pl.setAttribute( 'data-state', index === total - 1 ? 'disabled' : '' );
   }
 }
