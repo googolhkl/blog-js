@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
@@ -14,10 +14,11 @@ declare var highlightPrism: any;
 @Component({
   selector: 'app-blog',
   templateUrl: './blog-sidebar.component.html',
+
   styleUrls: ['./blog-sidebar.component.scss'],
   providers: [PaginatorService]
 })
-export class BlogSidebarComponent implements OnInit {
+export class BlogSidebarComponent implements OnInit, AfterViewChecked {
   searchMode: String = '';
   category: String;
   tag: String;
@@ -56,7 +57,9 @@ export class BlogSidebarComponent implements OnInit {
     this.http.get(`${environment.apiUrl}/tags`).subscribe(data => {
         this.tags = data;
     });
-    // prism.js
+  }
+
+  ngAfterViewChecked() {
     makePrism();
     highlightPrism();
   }
