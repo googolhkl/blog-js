@@ -1670,4 +1670,3 @@ function highlightPrism() {
 		});
 	})();
 }
-highlightPrism();

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
@@ -18,7 +18,7 @@ declare var highlightPrism: any;
   styleUrls: ['./blog-sidebar.component.scss'],
   providers: [PaginatorService]
 })
-export class BlogSidebarComponent implements OnInit, AfterViewChecked {
+export class BlogSidebarComponent implements OnInit {
   searchMode: String = '';
   category: String;
   tag: String;
@@ -57,11 +57,6 @@ export class BlogSidebarComponent implements OnInit, AfterViewChecked {
     this.http.get(`${environment.apiUrl}/tags`).subscribe(data => {
         this.tags = data;
     });
-  }
-
-  ngAfterViewChecked() {
-    makePrism();
-    highlightPrism();
   }
 
   pagenate(current: number, offset: number, total: number) {
@@ -119,6 +114,8 @@ export class BlogSidebarComponent implements OnInit, AfterViewChecked {
     this.post = null;
     this.http.get(`${environment.apiUrl}/posts/${id}`).subscribe(data => {
         this.post = data;
+        makePrism();
+        highlightPrism();
     });
   }
 }
