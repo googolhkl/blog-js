@@ -67,9 +67,7 @@
               <div class="experience-project-role">
                 {{project.role}}
               </div>
-              <div class="experience-project-description">
-                {{project.description}}
-              </div>
+              <div class="experience-project-description" [innerHTML]="project.description | safeHtml"></div>
             </div>
           </div>
         </div>
@@ -84,7 +82,7 @@
             <div class="self-introduction-subject hklfont">
               {{selfIntroduction.subject}}
             </div>
-            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description"></div>
+            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description | safeHtml"></div>
           </div>
         </div>
       </div>
@@ -158,7 +156,7 @@
               <div class="experience-project" *ngFor="let project of experience.projects">
                 <div class="experience-project-name">{{project.name}}</div>
                 <div class="experience-project-role">| {{project.role}}</div>
-                <div class="experience-project-description">{{project.description}}</div>
+                <div class="experience-project-description" [innerHTML]="project.description | safeHtml"></div>
               </div>
             </div>
         </section>
@@ -175,7 +173,7 @@
             <div class="self-introduction-subject hklfont">
               {{selfIntroduction.subject}}
             </div>
-            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description"></div>
+            <div class="self-introduction-description" [innerHTML]="selfIntroduction.description | safeHtml"></div>
           </div>
         </section>
       </div>
